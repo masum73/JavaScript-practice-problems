@@ -123,3 +123,14 @@ for (let i = 0; i < 10; i++) {
     const random = Math.round(Math.random() * 100);
     console.log(random);
 }
+
+// swap variable. swap without temp, destructing 
+
+let first = 5;
+let second = 7; 
+
+const temp = first;
+first = second;
+second = temp;
+
+console.log(first, second);
