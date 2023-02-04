@@ -134,3 +134,90 @@ first = second;
 second = temp;
 
 console.log(first, second);
+
+// approach 2 - destructing 
+//[first, second] = [second, first];
+
+
+// max - delicious cake 
+
+const jim = 69; 
+const dela = 99;
+const chinku = 97;
+
+/* if(jim > dela && jim > chinku){
+    console.log('Jim will get the cake');
+}else if (dela > jim && dela > chinku){
+    console.log('Dela will get the cake');
+}else{
+    console.log('Chinku will get the cake');
+} */
+
+function cake (num1, num2, num3){
+    const maxNumber = Math.max(num1,num2,num3);
+    return maxNumber;
+}
+const cakeResult = Math.max(jim,dela,chinku);
+console.log(cakeResult);
+
+//tallest guy 
+
+function maxInArray(numbers){
+    let largest = numbers[0];
+    for(let i =0; i < numbers.length; i++){
+        const index = i; 
+        const element = numbers[index];
+        if (element > largest){
+            largest = element;
+        }
+    }
+    return largest;
+}
+
+const height = [167, 190, 120, 165, 137];
+const tallest = maxInArray(height);
+console.log('Tallest person is: ',tallest);
+
+
+// reverse string
+
+function reverseString(text){
+    let reversed = '';
+    for(let i = text.length - 1; i >= 0; i--){
+        const element = text[i];
+        reversed = reversed + element;
+    }
+    return reversed;
+}
+
+const myString = 'I am a good boy';
+const reversed = reverseString(myString);
+console.log('reversed output: ',reversed);
+
+// word reverse 
+
+function reverserWords(str){
+    const words = str.split(' ');
+    //[ 'I', 'am', 'a', 'good', 'boy' ]
+    const result=[];
+    for(let i= words.length-1; i>=0; i--){
+        const element = words[i];
+        result.push(element);
+
+    }
+    const reversed = result.join(' ');
+    return reversed;
+}
+
+const myWord = reverserWords(myString);
+console.log(myWord);
+
+
+//fibonacci series using for loop
+// 0,1,1,2,3,5,8,13,21,34,55,89,144
+
+const fibo = [0,1];
+for(let i=2; i<=15;i++){
+    fibo[i] = fibo[i-1]+fibo[i-2];
+}
+console.log(fibo);
